@@ -1,0 +1,14 @@
+{
+	"name": "@page/home",
+	"main": "src/index.tsx",
+	"dependencies": {
+		"@ui/button": "workspace:^"
+	},
+	"devDependencies": {
+		"@types/react": "^18.2.20"
+	},
+	"peerDependencies": {
+		"react": "18",
+		"react-dom": "18"
+	}
+}

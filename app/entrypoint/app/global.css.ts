@@ -6,6 +6,7 @@ globalStyle('html, body', {
 	minHeight: '100dvh',
 	fontSize: '16px',
 	fontFamily: vars.font.main,
+	background: vars.color.background,
 })
 
 globalStyle('*:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *))', {

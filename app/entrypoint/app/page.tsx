@@ -1,3 +1,5 @@
+import { HomePage } from '@page/home'
+
 export default function Page() {
-	return <div>123</div>
+	return <HomePage />
 }

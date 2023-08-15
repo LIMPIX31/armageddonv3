@@ -1,0 +1,13 @@
+{
+	"name": "@theme/css",
+	"main": "src/index.css.ts",
+	"dependencies": {
+		"@theme/schema": "workspace:^"
+	},
+	"devDependencies": {
+		"@vanilla-extract/css": "^1.12.0"
+	},
+	"peerDependencies": {
+		"@vanilla-extract/css": "1"
+	}
+}
