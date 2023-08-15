@@ -1,0 +1,8 @@
+{
+	"name": "@theme/css",
+	"main": "src/index.css.ts",
+	"dependencies": {
+		"@theme/schema": "workspace:^",
+		"@vanilla-extract/css": "^1.12.0"
+	}
+}

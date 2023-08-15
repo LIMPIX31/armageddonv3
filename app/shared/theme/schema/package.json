@@ -1,0 +1,4 @@
+{
+	"name": "@theme/schema",
+	"main": "src/index.ts"
+}

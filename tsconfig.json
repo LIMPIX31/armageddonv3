@@ -49,6 +49,12 @@
     "paths": {
       "@app/entrypoint": [
         "app/entrypoint"
+      ],
+      "@theme/css": [
+        "app/shared/theme/css"
+      ],
+      "@theme/schema": [
+        "app/shared/theme/schema"
       ]
     }
   },
