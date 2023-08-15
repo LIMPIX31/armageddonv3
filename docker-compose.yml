@@ -1,0 +1,18 @@
+services:
+  yarn:
+    image: node:19
+    working_dir: /workspace
+    volumes:
+      - ./:/workspace
+    entrypoint: yarn
+    profiles: [ ]
+
+  app:
+    image: node:19
+    working_dir: /workspace
+    volumes:
+      - ./:/workspace
+    entrypoint: yarn workspace @app/entrypoint dev
+    profiles: [ dev ]
+    ports:
+      - 3000:3000
