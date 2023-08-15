@@ -13,6 +13,8 @@ services:
     volumes:
       - ./:/workspace
     entrypoint: yarn workspace @app/entrypoint dev
+    environment:
+      - API_KEY=aJSg0g3ObN09SCnVaNGWc3neH66yCiWKAv3cabBH
     profiles: [ dev ]
     ports:
       - 3000:3000
