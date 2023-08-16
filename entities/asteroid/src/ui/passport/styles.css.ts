@@ -18,9 +18,7 @@ export const name = style({
 	color: vars.color.primary,
 })
 
-export const table = style({
-
-})
+export const table = style({})
 
 export const thead = style({
 	fontWeight: '900',

@@ -2,6 +2,7 @@
 	"name": "@entity/cart",
 	"main": "src/index.ts",
 	"dependencies": {
+		"@api/asteroids": "workspace:^",
 		"@lib/declensions": "workspace:^",
 		"@theme/css": "workspace:^",
 		"@vanilla-extract/css": "^1.12.0",

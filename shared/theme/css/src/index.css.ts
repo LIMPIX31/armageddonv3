@@ -12,7 +12,8 @@ import {
 	red,
 	semigrayDisabled,
 	semiprimary,
-	semiprimaryLight, semired,
+	semiprimaryLight,
+	semired,
 } from '@theme/schema'
 
 export const [theme, vars] = createTheme({

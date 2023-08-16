@@ -455,6 +455,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@entity/asteroid@workspace:entities/asteroid"
   dependencies:
+    "@api/asteroids": "workspace:^"
     "@lib/declensions": "workspace:^"
     "@tanstack/react-table": "npm:^8.9.3"
     "@theme/css": "workspace:^"
@@ -470,6 +471,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@entity/cart@workspace:entities/cart"
   dependencies:
+    "@api/asteroids": "workspace:^"
     "@lib/declensions": "workspace:^"
     "@theme/css": "workspace:^"
     "@types/react": "npm:^18.2.20"

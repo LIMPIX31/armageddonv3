@@ -2,6 +2,7 @@
 	"name": "@entity/asteroid",
 	"main": "src/index.ts",
 	"dependencies": {
+		"@api/asteroids": "workspace:^",
 		"@lib/declensions": "workspace:^",
 		"@tanstack/react-table": "^8.9.3",
 		"@theme/css": "workspace:^",
