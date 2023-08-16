@@ -5,7 +5,7 @@ import { loadingStatus } from './style.css'
 import { AsteroidCard } from '@entity/asteroid'
 import { useInfiniteQuery } from '@tanstack/react-query'
 import { useInView } from 'react-intersection-observer'
-import { browse, BrowseResponse } from '@api/asteroids'
+import { feed, FeedResponse } from '@api/asteroids'
 import { useStore } from 'effector-react'
 import { $cart, addToCart } from '@entity/cart'
 import { AddToCartButton } from '@feature/add-to-cart'
@@ -18,12 +18,10 @@ function useAsteroids() {
 
 	const { status, data, isFetchingNextPage, fetchNextPage } = useInfiniteQuery({
 		queryKey: ['asteroids'],
-		queryFn: async ({ pageParam: page = 0 }) => browse({ page }),
-		defaultPageParam: 0,
-		getPreviousPageParam: (firstPage: BrowseResponse) =>
-			firstPage.page.number - 1 >= 0 ? firstPage.page.number - 1 : undefined,
-		getNextPageParam: (lastPage: BrowseResponse) =>
-			lastPage.page.number + 1 <= lastPage.page.total_pages ? lastPage.page.number + 1 : undefined,
+		queryFn: async ({ pageParam: date }) => feed({ date }),
+		defaultPageParam: new Date().toISOString().slice(0, 10),
+		getPreviousPageParam: (firstPage: FeedResponse) => firstPage.pagination.prev,
+		getNextPageParam: (lastPage: FeedResponse) => lastPage.pagination.next,
 	})
 
 	useEffect(() => {

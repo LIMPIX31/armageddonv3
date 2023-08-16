@@ -1,4 +1,4 @@
-const BASE_URL = 'https://api.nasa.gov/neo/rest/v1/neo/'
+const BASE_URL = 'https://api.nasa.gov/neo/rest/v1/'
 
 export function makeUrl(endpoint: string, options?: Record<string, string | number>) {
 	const url = new URL(endpoint, BASE_URL)

@@ -1,8 +1,6 @@
 export interface Pagination {
-	size: number
-	total_elements: number
-	total_pages: number
-	number: number
+	prev: string
+	next: string
 }
 
 export interface Diameter {
@@ -47,7 +45,7 @@ export interface EarthObject {
 	is_potentially_hazardous_asteroid: boolean
 }
 
-export interface BrowseResponse {
-	page: Pagination
+export interface FeedResponse {
+	pagination: Pagination
 	near_earth_objects: EarthObject[]
 }

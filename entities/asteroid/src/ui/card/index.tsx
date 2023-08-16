@@ -19,15 +19,7 @@ export const Card: FC<CardProps> = ({ asteroid, units, onClick, features }) => {
 		[asteroid.close_approach_data],
 	)
 
-	const filtered = useMemo(
-		() =>
-			closeApproachData
-				.filter(({ epoch_date_close_approach }) => epoch_date_close_approach - Date.now() > 0)
-				.sort((a, b) => a.epoch_date_close_approach - b.epoch_date_close_approach),
-		[closeApproachData],
-	)
-
-	const nearest = useMemo(() => filtered.at(0), [filtered])
+	const nearest = useMemo(() => closeApproachData.at(0), [closeApproachData])
 
 	const date = useMemo(() => dateFormat.format(new Date(nearest!.epoch_date_close_approach)), [nearest])
 	const distance = useMemo(
@@ -40,11 +32,11 @@ export const Card: FC<CardProps> = ({ asteroid, units, onClick, features }) => {
 	)
 
 	const size = useMemo(() => {
-		if (diameter < 5000) {
+		if (diameter < 100) {
 			return 'sm'
 		}
 
-		if (diameter < 15_000) {
+		if (diameter < 500) {
 			return 'md'
 		}
 
