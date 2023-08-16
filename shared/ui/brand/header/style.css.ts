@@ -10,7 +10,7 @@ export const header = style({
 })
 
 export const title = style({
-	fontSize: '3rem',
+	fontSize: '2.5rem',
 	fontWeight: '900',
 	color: vars.color.primary,
 })
