@@ -11,7 +11,7 @@ export interface CardProps {
 }
 
 const numberIntl = new Intl.NumberFormat('ru-RU', { maximumFractionDigits: 0 })
-const dateFormat = new Intl.DateTimeFormat('ru-RU', { dateStyle: 'medium' })
+const dateFormat = new Intl.DateTimeFormat('ru-RU', { dateStyle: 'medium', timeStyle: 'short' })
 
 export const Card: FC<CardProps> = ({ asteroid, units, onClick, features }) => {
 	const closeApproachData = useMemo(
