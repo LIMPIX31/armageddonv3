@@ -3,16 +3,6 @@ import * as s from './style.css'
 import { Asteroid } from '../../model'
 import { declonate } from '@lib/declensions'
 
-// export interface CardProps {
-// 	date: string
-// 	distance: string
-// 	diameter: string
-// 	quarter: string
-// 	isDanger: boolean
-// 	size: 'sm' | 'md' | 'lg'
-// 	features?: ReactNode[]
-// }
-
 export interface CardProps {
 	asteroid: Asteroid
 	units: 'lunar' | 'kilometers'
@@ -75,7 +65,7 @@ export const Card: FC<CardProps> = ({ asteroid, units, features }) => {
 			</div>
 			<div className={s.stats}>
 				<div>
-					{numberIntl.format(distance)} $
+					{numberIntl.format(distance)}
 					{units === 'kilometers' ? 'км' : `${declonate('c', 'лунн', distance)} ${declonate('b', 'орбит', distance)}`}
 					<div className={s.arrow} />
 				</div>
