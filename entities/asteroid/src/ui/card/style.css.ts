@@ -9,6 +9,8 @@ export const card = style({
 })
 
 export const date = style({
+	display: 'flex',
+	gap: 12,
 	fontSize: '1.5rem',
 	fontWeight: '600',
 })
@@ -125,6 +127,7 @@ export const danger = style({
 	fontSize: '0.9rem',
 	alignItems: 'center',
 	padding: '5px 8px',
+	backgroundColor: vars.color.semired,
 	color: vars.color.red,
 	borderRadius: vars.radius.sm,
 	gap: 6,

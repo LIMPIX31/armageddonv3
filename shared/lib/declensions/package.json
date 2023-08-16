@@ -1,0 +1,4 @@
+{
+	"name": "@lib/declensions",
+	"main": "src/index.ts"
+}

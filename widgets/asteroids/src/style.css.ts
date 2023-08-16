@@ -12,3 +12,9 @@ export const title = style({
 	fontWeight: '900',
 	fontSize: '2rem',
 })
+
+export const list = style({
+	display: 'flex',
+	flexDirection: 'column',
+	gap: 12,
+})

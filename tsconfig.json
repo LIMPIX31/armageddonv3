@@ -53,6 +53,9 @@
       "@entity/asteroid": [
         "entities/asteroid"
       ],
+      "@entity/cart": [
+        "entities/cart"
+      ],
       "@page/home": [
         "pages/home"
       ],
@@ -61,6 +64,9 @@
       ],
       "@layout/home": [
         "shared/layouts/home"
+      ],
+      "@lib/declensions": [
+        "shared/lib/declensions"
       ],
       "@theme/css": [
         "shared/theme/css"
@@ -76,6 +82,9 @@
       ],
       "@widget/asteroids": [
         "widgets/asteroids"
+      ],
+      "@widget/cart-preview": [
+        "widgets/cart-preview"
       ]
     }
   },

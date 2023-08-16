@@ -462,6 +462,22 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@entity/cart@workspace:^, @entity/cart@workspace:entities/cart":
+  version: 0.0.0-use.local
+  resolution: "@entity/cart@workspace:entities/cart"
+  dependencies:
+    "@lib/declensions": "workspace:^"
+    "@theme/css": "workspace:^"
+    "@types/react": "npm:^18.2.20"
+    "@ui/button": "workspace:^"
+    "@vanilla-extract/css": "npm:^1.12.0"
+    effector: "npm:^22.8.6"
+  peerDependencies:
+    react: 18
+    react-dom: 18
+  languageName: unknown
+  linkType: soft
+
 "@esbuild/android-arm64@npm:0.17.6":
   version: 0.17.6
   resolution: "@esbuild/android-arm64@npm:0.17.6"
@@ -905,6 +921,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@lib/declensions@workspace:^, @lib/declensions@workspace:shared/lib/declensions":
+  version: 0.0.0-use.local
+  resolution: "@lib/declensions@workspace:shared/lib/declensions"
+  languageName: unknown
+  linkType: soft
+
 "@lmpx-config/eslint@npm:^0.0.9":
   version: 0.0.9
   resolution: "@lmpx-config/eslint@npm:0.0.9"
@@ -1048,6 +1070,7 @@ __metadata:
     "@types/react": "npm:^18.2.20"
     "@ui/brand": "workspace:^"
     "@widget/asteroids": "workspace:^"
+    "@widget/cart-preview": "workspace:^"
   peerDependencies:
     react: 18
     react-dom: 18
@@ -1542,6 +1565,20 @@ __metadata:
     "@types/react": "npm:^18.2.20"
     "@ui/button": "workspace:^"
     "@vanilla-extract/css": "npm:^1.12.0"
+  peerDependencies:
+    react: 18
+    react-dom: 18
+  languageName: unknown
+  linkType: soft
+
+"@widget/cart-preview@workspace:^, @widget/cart-preview@workspace:widgets/cart-preview":
+  version: 0.0.0-use.local
+  resolution: "@widget/cart-preview@workspace:widgets/cart-preview"
+  dependencies:
+    "@entity/cart": "workspace:^"
+    "@types/react": "npm:^18.2.20"
+    effector: "npm:^22.8.6"
+    effector-react: "npm:^22.5.3"
   peerDependencies:
     react: 18
     react-dom: 18
@@ -3139,6 +3176,25 @@ __metadata:
   version: 0.2.0
   resolution: "eastasianwidth@npm:0.2.0"
   checksum: 26f364ebcdb6395f95124fda411f63137a4bfb5d3a06453f7f23dfe52502905bd84e0488172e0f9ec295fdc45f05c23d5d91baf16bd26f0fe9acd777a188dc39
+  languageName: node
+  linkType: hard
+
+"effector-react@npm:^22.5.3":
+  version: 22.5.3
+  resolution: "effector-react@npm:22.5.3"
+  dependencies:
+    use-sync-external-store: "npm:^1.0.0"
+  peerDependencies:
+    effector: ^22.0.2
+    react: ">=16.8.0 <19.0.0"
+  checksum: 35353c5c29860757384ab2c949a430b6c8fbfac58fb2f9b80846b78040573893e490aab041051dc026d408379c9e317b729ef6d6efe938bf27ce4346ac018ea6
+  languageName: node
+  linkType: hard
+
+"effector@npm:^22.8.6":
+  version: 22.8.6
+  resolution: "effector@npm:22.8.6"
+  checksum: ccd87075e45ec2563831fe367b8369da924cc9eaac77d604b7ac0a81cec5b981578c648b50bcf5226902a557b1a9b4f1c5e517becff43d306e7609862e0fd630
   languageName: node
   linkType: hard
 
@@ -7035,6 +7091,15 @@ __metadata:
   dependencies:
     punycode: "npm:^2.1.0"
   checksum: 4ef57b45aa820d7ac6496e9208559986c665e49447cb072744c13b66925a362d96dd5a46c4530a6b8e203e5db5fe849369444440cb22ecfc26c679359e5dfa3c
+  languageName: node
+  linkType: hard
+
+"use-sync-external-store@npm:^1.0.0":
+  version: 1.2.0
+  resolution: "use-sync-external-store@npm:1.2.0"
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0
+  checksum: ac4814e5592524f242921157e791b022efe36e451fe0d4fd4d204322d5433a4fc300d63b0ade5185f8e0735ded044c70bcf6d2352db0f74d097a238cebd2da02
   languageName: node
   linkType: hard
 
