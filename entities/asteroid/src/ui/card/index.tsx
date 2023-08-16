@@ -7,12 +7,13 @@ export interface CardProps {
 	asteroid: Asteroid
 	units: 'lunar' | 'kilometers'
 	features?: ReactNode[]
+	onClick?: () => void
 }
 
 const numberIntl = new Intl.NumberFormat('ru-RU', { maximumFractionDigits: 0 })
 const dateFormat = new Intl.DateTimeFormat('ru-RU', { dateStyle: 'medium' })
 
-export const Card: FC<CardProps> = ({ asteroid, units, features }) => {
+export const Card: FC<CardProps> = ({ asteroid, units, onClick, features }) => {
 	const closeApproachData = useMemo(
 		() => [...asteroid.close_approach_data].sort((a, b) => +a.miss_distance.kilometers - +b.miss_distance.kilometers),
 		[asteroid.close_approach_data],
@@ -52,7 +53,8 @@ export const Card: FC<CardProps> = ({ asteroid, units, features }) => {
 
 	return (
 		<div className={s.card}>
-			<div className={s.date}>
+			{/* eslint-disable-next-line jsx-a11y/click-events-have-key-events,jsx-a11y/no-static-element-interactions */}
+			<div className={s.date} onClick={onClick}>
 				{date}
 				{asteroid.is_potentially_hazardous_asteroid && (
 					<div className={s.danger}>

@@ -165,6 +165,7 @@ __metadata:
   resolution: "@app/entrypoint@workspace:app/entrypoint"
   dependencies:
     "@next/bundle-analyzer": "npm:^13.4.16"
+    "@page/asteroid": "workspace:^"
     "@page/checkout": "workspace:^"
     "@page/home": "workspace:^"
     "@tanstack/react-query": "npm:5.0.0-beta.16"
@@ -455,6 +456,7 @@ __metadata:
   resolution: "@entity/asteroid@workspace:entities/asteroid"
   dependencies:
     "@lib/declensions": "workspace:^"
+    "@tanstack/react-table": "npm:^8.9.3"
     "@theme/css": "workspace:^"
     "@types/react": "npm:^18.2.20"
     "@vanilla-extract/css": "npm:^1.12.0"
@@ -1087,6 +1089,21 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@page/asteroid@workspace:^, @page/asteroid@workspace:pages/asteroid":
+  version: 0.0.0-use.local
+  resolution: "@page/asteroid@workspace:pages/asteroid"
+  dependencies:
+    "@api/asteroids": "workspace:^"
+    "@entity/asteroid": "workspace:^"
+    "@theme/css": "workspace:^"
+    "@types/react": "npm:^18.2.20"
+    "@vanilla-extract/css": "npm:^1.12.0"
+  peerDependencies:
+    react: 18
+    react-dom: 18
+  languageName: unknown
+  linkType: soft
+
 "@page/checkout@workspace:^, @page/checkout@workspace:pages/checkout":
   version: 0.0.0-use.local
   resolution: "@page/checkout@workspace:pages/checkout"
@@ -1208,6 +1225,25 @@ __metadata:
     react-native:
       optional: true
   checksum: 74b39584b2cbef4add8a465bfc363d98a5827eb6dc6d124892f25d63ab8a87766450025b010f8b5edb3e31126158b81fc4de5241666458f9c86c8d8c12258b74
+  languageName: node
+  linkType: hard
+
+"@tanstack/react-table@npm:^8.9.3":
+  version: 8.9.3
+  resolution: "@tanstack/react-table@npm:8.9.3"
+  dependencies:
+    "@tanstack/table-core": "npm:8.9.3"
+  peerDependencies:
+    react: ">=16"
+    react-dom: ">=16"
+  checksum: b8b56ed2345d56e2ac850d8e8f2833d7cb397d0727ac645d3ba5045af05019aa1f5957f38cf3ede36c0434ebe6aa61dec58f0cedcb88904d1a43f5cdb2dd43d7
+  languageName: node
+  linkType: hard
+
+"@tanstack/table-core@npm:8.9.3":
+  version: 8.9.3
+  resolution: "@tanstack/table-core@npm:8.9.3"
+  checksum: 0192a6239f0624fff99bf74dadb13f5cb692f9f4883879716048b78e342df8a7a8cf92df3bcc39dbedc6884c3ac74e71919cf9164b0dd328d520e1c28dd71d3b
   languageName: node
   linkType: hard
 
@@ -1625,9 +1661,11 @@ __metadata:
     "@vanilla-extract/css": "npm:^1.12.0"
     effector: "npm:^22.8.6"
     effector-react: "npm:^22.5.3"
+    next: "npm:^13.4.16"
     react-intersection-observer: "npm:^9.5.2"
   peerDependencies:
     "@tanstack/react-query": 5
+    next: 13
     react: 18
     react-dom: 18
   languageName: unknown

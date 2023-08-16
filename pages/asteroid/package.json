@@ -1,9 +1,9 @@
 {
-	"name": "@entity/asteroid",
-	"main": "src/index.ts",
+	"name": "@page/asteroid",
+	"main": "src/index.tsx",
 	"dependencies": {
-		"@lib/declensions": "workspace:^",
-		"@tanstack/react-table": "^8.9.3",
+		"@api/asteroids": "workspace:^",
+		"@entity/asteroid": "workspace:^",
 		"@theme/css": "workspace:^",
 		"@vanilla-extract/css": "^1.12.0"
 	},

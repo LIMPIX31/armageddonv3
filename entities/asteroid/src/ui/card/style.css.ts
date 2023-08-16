@@ -6,6 +6,7 @@ export const card = style({
 	flexDirection: 'column',
 	color: vars.color.foreground,
 	gap: 32,
+	cursor: 'pointer',
 })
 
 export const date = style({
@@ -13,6 +14,9 @@ export const date = style({
 	gap: 12,
 	fontSize: '1.5rem',
 	fontWeight: '600',
+	':hover': {
+		textDecoration: 'underline',
+	},
 })
 
 export const stats = style({

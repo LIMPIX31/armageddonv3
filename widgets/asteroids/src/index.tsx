@@ -1,7 +1,7 @@
 'use client'
 
 import { FC, useCallback, useEffect } from 'react'
-import { list, loadingStatus, root, title } from './style.css'
+import { loadingStatus } from './style.css'
 import { AsteroidCard } from '@entity/asteroid'
 import { useInfiniteQuery } from '@tanstack/react-query'
 import { useInView } from 'react-intersection-observer'
@@ -10,6 +10,7 @@ import { useStore } from 'effector-react'
 import { $cart, addToCart } from '@entity/cart'
 import { AddToCartButton } from '@feature/add-to-cart'
 import { TitledList } from '@ui/titled-list'
+import { useRouter } from 'next/navigation'
 
 function useAsteroids() {
 	const { ref, inView } = useInView()
@@ -42,6 +43,7 @@ function useGetAlreadyInCart() {
 export const Asteroids: FC = () => {
 	const { ref, data, status, isFetchingNextPage } = useAsteroids()
 	const getAlreadyInCart = useGetAlreadyInCart()
+	const { push } = useRouter()
 
 	return (
 		<TitledList title='Ближайшие подлёты астероидов'>
@@ -58,6 +60,7 @@ export const Asteroids: FC = () => {
 									key={asteroid.id}
 									asteroid={asteroid}
 									units='lunar'
+									onClick={() => push(`asteroid/${asteroid.id}`)}
 									features={[
 										<AddToCartButton
 											alreadyInCart={getAlreadyInCart(asteroid.id)}

@@ -29,6 +29,12 @@ export interface CloseApproachData {
 	close_approach_date_full: string
 	epoch_date_close_approach: number
 	miss_distance: MissDistance
+	relative_velocity: RelativeVelocity
+	orbiting_body: string
+}
+
+export interface RelativeVelocity {
+	kilometers_per_second: string
 }
 
 export interface EarthObject {

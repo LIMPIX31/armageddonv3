@@ -62,6 +62,9 @@
       "@feature/cart-checkout": [
         "features/cart-checkout"
       ],
+      "@page/asteroid": [
+        "pages/asteroid"
+      ],
       "@page/checkout": [
         "pages/checkout"
       ],
