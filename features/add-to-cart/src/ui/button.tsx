@@ -7,7 +7,7 @@ export interface ButtonProps {
 }
 
 export const Button: FC<ButtonProps> = ({ alreadyInCart, onClick }) => (
-	<SharedButton variant='surface' disabled={alreadyInCart} onClick={onClick}>
+	<SharedButton variant='surface' size='sm' disabled={alreadyInCart} onClick={onClick}>
 		{alreadyInCart ? 'В корзине' : 'Заказать'}
 	</SharedButton>
 )

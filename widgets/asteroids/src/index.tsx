@@ -9,6 +9,7 @@ import { browse, BrowseResponse } from '@api/asteroids'
 import { useStore } from 'effector-react'
 import { $cart, addToCart } from '@entity/cart'
 import { AddToCartButton } from '@feature/add-to-cart'
+import { TitledList } from '@ui/titled-list'
 
 function useAsteroids() {
 	const { ref, inView } = useInView()
@@ -43,21 +44,20 @@ export const Asteroids: FC = () => {
 	const getAlreadyInCart = useGetAlreadyInCart()
 
 	return (
-		<div className={root}>
-			<div className={title}>Ближайшие подлёты астероидов</div>
+		<TitledList title='Ближайшие подлёты астероидов'>
 			{status === 'pending' ? (
 				<div className={loadingStatus}>Загрузка</div>
 			) : status === 'error' ? (
 				<div className={loadingStatus}>Ошибка</div>
 			) : (
-				<div className={list}>
+				<>
 					{data!.pages.map((page) => (
 						<>
 							{page.near_earth_objects.map((asteroid) => (
 								<AsteroidCard
 									key={asteroid.id}
 									asteroid={asteroid}
-									units='kilometers'
+									units='lunar'
 									features={[
 										<AddToCartButton
 											alreadyInCart={getAlreadyInCart(asteroid.id)}
@@ -72,8 +72,8 @@ export const Asteroids: FC = () => {
 					<div ref={ref} className={loadingStatus}>
 						{isFetchingNextPage ? 'Загрузка' : 'Астероиды закончились'}
 					</div>
-				</div>
+				</>
 			)}
-		</div>
+		</TitledList>
 	)
 }

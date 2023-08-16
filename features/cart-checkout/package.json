@@ -1,11 +1,8 @@
 {
-	"name": "@entity/cart",
+	"name": "@feature/cart-checkout",
 	"main": "src/index.ts",
 	"dependencies": {
-		"@lib/declensions": "workspace:^",
-		"@theme/css": "workspace:^",
-		"@vanilla-extract/css": "^1.12.0",
-		"effector": "^22.8.6"
+		"@ui/button": "workspace:^"
 	},
 	"devDependencies": {
 		"@types/react": "^18.2.20"

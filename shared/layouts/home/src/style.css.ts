@@ -12,6 +12,7 @@ export const rootDesktop = style({
 export const row = style({
 	display: 'grid',
 	gridTemplateColumns: '1fr 1fr 1fr',
+	gap: 16,
 	flexGrow: 1,
 })
 
@@ -27,7 +28,7 @@ export const earthDesktop = style({
 export const side = style({
 	display: 'flex',
 	flexDirection: 'column',
-	alignItems: 'start',
+	alignItems: 'flex-start',
 })
 
 export const content = style({

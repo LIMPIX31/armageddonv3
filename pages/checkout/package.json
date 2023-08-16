@@ -1,0 +1,16 @@
+{
+	"name": "@page/checkout",
+	"main": "src/index.tsx",
+	"dependencies": {
+		"@layout/home": "workspace:^",
+		"@ui/brand": "workspace:^",
+		"@widget/order": "workspace:^"
+	},
+	"devDependencies": {
+		"@types/react": "^18.2.20"
+	},
+	"peerDependencies": {
+		"react": "18",
+		"react-dom": "18"
+	}
+}

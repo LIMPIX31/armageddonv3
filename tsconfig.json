@@ -59,6 +59,12 @@
       "@feature/add-to-cart": [
         "features/add-to-cart"
       ],
+      "@feature/cart-checkout": [
+        "features/cart-checkout"
+      ],
+      "@page/checkout": [
+        "pages/checkout"
+      ],
       "@page/home": [
         "pages/home"
       ],
@@ -83,11 +89,17 @@
       "@ui/button": [
         "shared/ui/button"
       ],
+      "@ui/titled-list": [
+        "shared/ui/titled-list"
+      ],
       "@widget/asteroids": [
         "widgets/asteroids"
       ],
       "@widget/cart-preview": [
         "widgets/cart-preview"
+      ],
+      "@widget/order": [
+        "widgets/order"
       ]
     }
   },

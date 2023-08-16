@@ -15,6 +15,7 @@
     "tslib": "^2.6.1"
   },
   "dependencies": {
+    "@page/checkout": "workspace:^",
     "@page/home": "workspace:^",
     "@tanstack/react-query": "5.0.0-beta.16",
     "@theme/css": "workspace:^",

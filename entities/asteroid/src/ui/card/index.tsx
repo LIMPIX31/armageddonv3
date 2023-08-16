@@ -9,8 +9,8 @@ export interface CardProps {
 	features?: ReactNode[]
 }
 
-const numberIntl = new Intl.NumberFormat(window.navigator.language, { maximumFractionDigits: 0 })
-const dateFormat = new Intl.DateTimeFormat(window.navigator.language, { dateStyle: 'medium' })
+const numberIntl = new Intl.NumberFormat('ru-RU', { maximumFractionDigits: 0 })
+const dateFormat = new Intl.DateTimeFormat('ru-RU', { dateStyle: 'medium' })
 
 export const Card: FC<CardProps> = ({ asteroid, units, features }) => {
 	const closeApproachData = useMemo(
@@ -29,7 +29,10 @@ export const Card: FC<CardProps> = ({ asteroid, units, features }) => {
 	const nearest = useMemo(() => filtered.at(0), [filtered])
 
 	const date = useMemo(() => dateFormat.format(new Date(nearest!.epoch_date_close_approach)), [nearest])
-	const distance = useMemo(() => +nearest!.miss_distance.kilometers, [nearest])
+	const distance = useMemo(
+		() => (units === 'kilometers' ? +nearest!.miss_distance.kilometers : Math.floor(+nearest!.miss_distance.lunar)),
+		[nearest, units],
+	)
 	const diameter = useMemo(
 		() => asteroid.estimated_diameter.meters.estimated_diameter_max,
 		[asteroid.estimated_diameter.meters.estimated_diameter_max],
@@ -65,7 +68,7 @@ export const Card: FC<CardProps> = ({ asteroid, units, features }) => {
 			</div>
 			<div className={s.stats}>
 				<div>
-					{numberIntl.format(distance)}
+					{numberIntl.format(distance)}{' '}
 					{units === 'kilometers' ? 'км' : `${declonate('c', 'лунн', distance)} ${declonate('b', 'орбит', distance)}`}
 					<div className={s.arrow} />
 				</div>
