@@ -12,7 +12,7 @@ import {
 	red,
 	semigrayDisabled,
 	semiprimary,
-	semiprimaryLight,
+	semiprimaryLight, semired,
 } from '@theme/schema'
 
 export const [theme, vars] = createTheme({
@@ -29,6 +29,7 @@ export const [theme, vars] = createTheme({
 		semigrayDisabled,
 		grayDisabledTextDark,
 		foreground,
+		semired,
 	},
 	font: {
 		main: 'var(--font-mabry)',

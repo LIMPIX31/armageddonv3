@@ -449,6 +449,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@entity/asteroid@workspace:^, @entity/asteroid@workspace:entities/asteroid":
+  version: 0.0.0-use.local
+  resolution: "@entity/asteroid@workspace:entities/asteroid"
+  dependencies:
+    "@theme/css": "workspace:^"
+    "@types/react": "npm:^18.2.20"
+    "@vanilla-extract/css": "npm:^1.12.0"
+  peerDependencies:
+    react: 18
+    react-dom: 18
+  languageName: unknown
+  linkType: soft
+
 "@esbuild/android-arm64@npm:0.17.6":
   version: 0.17.6
   resolution: "@esbuild/android-arm64@npm:0.17.6"
@@ -1034,6 +1047,7 @@ __metadata:
     "@layout/home": "workspace:^"
     "@types/react": "npm:^18.2.20"
     "@ui/brand": "workspace:^"
+    "@widget/asteroids": "workspace:^"
   peerDependencies:
     react: 18
     react-dom: 18
@@ -1414,7 +1428,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ui/button@workspace:shared/ui/button":
+"@ui/button@workspace:^, @ui/button@workspace:shared/ui/button":
   version: 0.0.0-use.local
   resolution: "@ui/button@workspace:shared/ui/button"
   dependencies:
@@ -1518,6 +1532,21 @@ __metadata:
   checksum: 5fb82066ac4fc57ec3e8a9f5fe09c266dd9446fb19b7e33a62d215ab4b5ec089617ab60e37819584596fe9f1b618fe5c6993b1aef1d80a6c8854cde8fd606c81
   languageName: node
   linkType: hard
+
+"@widget/asteroids@workspace:^, @widget/asteroids@workspace:widgets/asteroids":
+  version: 0.0.0-use.local
+  resolution: "@widget/asteroids@workspace:widgets/asteroids"
+  dependencies:
+    "@entity/asteroid": "workspace:^"
+    "@theme/css": "workspace:^"
+    "@types/react": "npm:^18.2.20"
+    "@ui/button": "workspace:^"
+    "@vanilla-extract/css": "npm:^1.12.0"
+  peerDependencies:
+    react: 18
+    react-dom: 18
+  languageName: unknown
+  linkType: soft
 
 "@yarnpkg/builder@npm:^4.0.0-rc.48":
   version: 4.0.0-rc.48

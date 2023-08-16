@@ -3,6 +3,7 @@ import { style } from '@vanilla-extract/css'
 export const rootDesktop = style({
 	display: 'flex',
 	flexDirection: 'column',
+	gap: 32,
 	padding: 64,
 })
 

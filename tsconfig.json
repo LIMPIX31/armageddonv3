@@ -50,6 +50,9 @@
       "@app/entrypoint": [
         "app/entrypoint"
       ],
+      "@entity/asteroid": [
+        "entities/asteroid"
+      ],
       "@page/home": [
         "pages/home"
       ],
@@ -70,6 +73,9 @@
       ],
       "@ui/button": [
         "shared/ui/button"
+      ],
+      "@widget/asteroids": [
+        "widgets/asteroids"
       ]
     }
   },

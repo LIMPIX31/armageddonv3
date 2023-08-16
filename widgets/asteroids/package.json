@@ -1,10 +1,11 @@
 {
-	"name": "@page/home",
+	"name": "@widget/asteroids",
 	"main": "src/index.tsx",
 	"dependencies": {
-		"@layout/home": "workspace:^",
-		"@ui/brand": "workspace:^",
-		"@widget/asteroids": "workspace:^"
+		"@entity/asteroid": "workspace:^",
+		"@theme/css": "workspace:^",
+		"@ui/button": "workspace:^",
+		"@vanilla-extract/css": "^1.12.0"
 	},
 	"devDependencies": {
 		"@types/react": "^18.2.20"

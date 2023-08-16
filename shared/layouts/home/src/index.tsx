@@ -1,5 +1,5 @@
-import { FC, ReactNode, useMemo } from 'react'
-import { earthDesktop, rootDesktop, rootMobile, row } from './style.css'
+import { FC, ReactNode } from 'react'
+import { earthDesktop, rootDesktop, row } from './style.css'
 
 export interface HomeLayoutProps {
 	header: ReactNode
@@ -8,26 +8,13 @@ export interface HomeLayoutProps {
 	cart: ReactNode
 }
 
-export const HomeLayout: FC<HomeLayoutProps> = ({ header, container, cart, earth }) => {
-	const isMobile = useMemo(() => (typeof window !== 'undefined' ? window.matchMedia('(width <= 600px)') : false), [])
-
-	if (isMobile) {
-		return (
-			<div className={rootMobile}>
-				{header}
-				{container}
-			</div>
-		)
-	}
-
-	return (
-		<div className={rootDesktop}>
-			{header}
-			<div className={row}>
-				<div className={earthDesktop}>{earth}</div>
-				{container}
-				{cart}
-			</div>
+export const HomeLayout: FC<HomeLayoutProps> = ({ header, container, cart, earth }) => (
+	<div className={rootDesktop}>
+		{header}
+		<div className={row}>
+			<div className={earthDesktop}>{earth}</div>
+			{container}
+			{cart}
 		</div>
-	)
-}
+	</div>
+)

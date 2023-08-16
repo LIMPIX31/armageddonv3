@@ -14,6 +14,8 @@ export const grayDisabledText = `color-mix(in srgb, ${background}, ${foreground}
 export const grayDisabledTextDark = `color-mix(in srgb, ${background}, ${grayDisabledText} 80%)`
 export const semigrayDisabled = `color-mix(in srgb, ${background}, ${grayDisabled} 20%)`
 
+export const semired = `color-mix(in srgb, ${background}, ${red} 20%)`
+
 export const radius = {
 	sm: '3px',
 	md: '6px',
