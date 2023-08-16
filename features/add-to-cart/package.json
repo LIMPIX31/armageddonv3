@@ -1,0 +1,14 @@
+{
+	"name": "@feature/add-to-cart",
+	"main": "src/index.ts",
+	"devDependencies": {
+		"@types/react": "^18.2.20"
+	},
+	"dependencies": {
+		"@ui/button": "workspace:^"
+	},
+	"peerDependencies": {
+		"react": "18",
+		"react-dom": "18"
+	}
+}

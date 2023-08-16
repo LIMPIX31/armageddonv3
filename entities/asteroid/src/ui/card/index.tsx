@@ -40,7 +40,7 @@ export const Card: FC<CardProps> = ({ asteroid, units, features }) => {
 			return 'sm'
 		}
 
-		if (diameter < 50_000) {
+		if (diameter < 15_000) {
 			return 'md'
 		}
 

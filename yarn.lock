@@ -829,6 +829,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@feature/add-to-cart@workspace:^, @feature/add-to-cart@workspace:features/add-to-cart":
+  version: 0.0.0-use.local
+  resolution: "@feature/add-to-cart@workspace:features/add-to-cart"
+  dependencies:
+    "@types/react": "npm:^18.2.20"
+    "@ui/button": "workspace:^"
+  peerDependencies:
+    react: 18
+    react-dom: 18
+  languageName: unknown
+  linkType: soft
+
 "@humanwhocodes/config-array@npm:^0.11.10":
   version: 0.11.10
   resolution: "@humanwhocodes/config-array@npm:0.11.10"
@@ -1563,11 +1575,15 @@ __metadata:
   dependencies:
     "@api/asteroids": "workspace:^"
     "@entity/asteroid": "workspace:^"
+    "@entity/cart": "workspace:^"
+    "@feature/add-to-cart": "workspace:^"
     "@tanstack/react-query": "npm:^5.0.0-beta.16"
     "@theme/css": "workspace:^"
     "@types/react": "npm:^18.2.20"
     "@ui/button": "workspace:^"
     "@vanilla-extract/css": "npm:^1.12.0"
+    effector: "npm:^22.8.6"
+    effector-react: "npm:^22.5.3"
     react-intersection-observer: "npm:^9.5.2"
   peerDependencies:
     "@tanstack/react-query": 5

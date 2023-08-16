@@ -56,6 +56,9 @@
       "@entity/cart": [
         "entities/cart"
       ],
+      "@feature/add-to-cart": [
+        "features/add-to-cart"
+      ],
       "@page/home": [
         "pages/home"
       ],
