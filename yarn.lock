@@ -154,6 +154,12 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@api/asteroids@workspace:shared/api/asteroids":
+  version: 0.0.0-use.local
+  resolution: "@api/asteroids@workspace:shared/api/asteroids"
+  languageName: unknown
+  linkType: soft
+
 "@app/entrypoint@workspace:app/entrypoint":
   version: 0.0.0-use.local
   resolution: "@app/entrypoint@workspace:app/entrypoint"
@@ -873,6 +879,18 @@ __metadata:
   checksum: 845e6c6efca621b2b85e4d13fd25c319b6e4ab1ea78d4385ff6c0f78322ea0fcdfec8ac763aa4b56e8378c96d7bef101a2638c7a1a076f7d62f6376230c940a7
   languageName: node
   linkType: hard
+
+"@layout/home@workspace:shared/layouts/home":
+  version: 0.0.0-use.local
+  resolution: "@layout/home@workspace:shared/layouts/home"
+  dependencies:
+    "@types/react": "npm:^18.2.20"
+    "@vanilla-extract/css": "npm:^1.12.0"
+  peerDependencies:
+    react: 18
+    react-dom: 18
+  languageName: unknown
+  linkType: soft
 
 "@lmpx-config/eslint@npm:^0.0.9":
   version: 0.0.9

@@ -1,0 +1,14 @@
+{
+	"name": "@layout/home",
+	"main": "src/index.tsx",
+	"dependencies": {
+		"@vanilla-extract/css": "^1.12.0"
+	},
+	"devDependencies": {
+		"@types/react": "^18.2.20"
+	},
+	"peerDependencies": {
+		"react": "18",
+		"react-dom": "18"
+	}
+}

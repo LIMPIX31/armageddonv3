@@ -53,6 +53,12 @@
       "@page/home": [
         "pages/home"
       ],
+      "@api/asteroids": [
+        "shared/api/asteroids"
+      ],
+      "@layout/home": [
+        "shared/layouts/home"
+      ],
       "@theme/css": [
         "shared/theme/css"
       ],
