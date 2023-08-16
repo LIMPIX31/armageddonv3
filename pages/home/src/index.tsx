@@ -1,8 +1,12 @@
 import { FC } from 'react'
-import { Button } from '@ui/button'
+import { HomeLayout } from '@layout/home'
+import { Earth, Header } from '@ui/brand'
 
 export const HomePage: FC = () => (
-	<div>
-		<Button variant='surface' disabled>Заказать</Button>
-	</div>
+	<HomeLayout
+		header={<Header key='header' />}
+		earth={<Earth key='earth' width={2048} height={2048} />}
+		container={<div />}
+		cart={<div />}
+	/>
 )

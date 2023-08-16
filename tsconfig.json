@@ -65,6 +65,9 @@
       "@theme/schema": [
         "shared/theme/schema"
       ],
+      "@ui/brand": [
+        "shared/ui/brand"
+      ],
       "@ui/button": [
         "shared/ui/button"
       ]

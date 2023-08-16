@@ -2,7 +2,8 @@
 	"name": "@page/home",
 	"main": "src/index.tsx",
 	"dependencies": {
-		"@ui/button": "workspace:^"
+		"@layout/home": "workspace:^",
+		"@ui/brand": "workspace:^"
 	},
 	"devDependencies": {
 		"@types/react": "^18.2.20"

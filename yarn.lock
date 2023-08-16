@@ -880,7 +880,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@layout/home@workspace:shared/layouts/home":
+"@layout/home@workspace:^, @layout/home@workspace:shared/layouts/home":
   version: 0.0.0-use.local
   resolution: "@layout/home@workspace:shared/layouts/home"
   dependencies:
@@ -1031,8 +1031,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@page/home@workspace:pages/home"
   dependencies:
+    "@layout/home": "workspace:^"
     "@types/react": "npm:^18.2.20"
-    "@ui/button": "workspace:^"
+    "@ui/brand": "workspace:^"
   peerDependencies:
     react: 18
     react-dom: 18
@@ -1398,7 +1399,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@ui/button@workspace:^, @ui/button@workspace:shared/ui/button":
+"@ui/brand@workspace:^, @ui/brand@workspace:shared/ui/brand":
+  version: 0.0.0-use.local
+  resolution: "@ui/brand@workspace:shared/ui/brand"
+  dependencies:
+    "@theme/css": "workspace:^"
+    "@types/react": "npm:^18.2.20"
+    "@vanilla-extract/css": "npm:1"
+    next: "npm:^13.4.16"
+  peerDependencies:
+    next: 13
+    react: 18
+    react-dom: 18
+  languageName: unknown
+  linkType: soft
+
+"@ui/button@workspace:shared/ui/button":
   version: 0.0.0-use.local
   resolution: "@ui/button@workspace:shared/ui/button"
   dependencies:

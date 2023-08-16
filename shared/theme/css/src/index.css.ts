@@ -1,13 +1,16 @@
 import { createTheme } from '@vanilla-extract/css'
 import {
 	background,
+	foreground,
 	grayDisabled,
-	grayDisabledText, grayDisabledTextDark,
+	grayDisabledText,
+	grayDisabledTextDark,
 	green,
 	primary,
 	primaryDark,
 	radius,
-	red, semigrayDisabled,
+	red,
+	semigrayDisabled,
 	semiprimary,
 	semiprimaryLight,
 } from '@theme/schema'
@@ -25,6 +28,7 @@ export const [theme, vars] = createTheme({
 		grayDisabledText,
 		semigrayDisabled,
 		grayDisabledTextDark,
+		foreground,
 	},
 	font: {
 		main: 'var(--font-mabry)',

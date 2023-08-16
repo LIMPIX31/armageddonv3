@@ -1,5 +1,5 @@
 import { FC, ReactNode, useMemo } from 'react'
-import { rootDesktop, rootMobile, row } from './style.css'
+import { earthDesktop, rootDesktop, rootMobile, row } from './style.css'
 
 export interface HomeLayoutProps {
 	header: ReactNode
@@ -24,7 +24,7 @@ export const HomeLayout: FC<HomeLayoutProps> = ({ header, container, cart, earth
 		<div className={rootDesktop}>
 			{header}
 			<div className={row}>
-				{earth}
+				<div className={earthDesktop}>{earth}</div>
 				{container}
 				{cart}
 			</div>
