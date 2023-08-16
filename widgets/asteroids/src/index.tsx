@@ -1,6 +1,6 @@
 'use client'
 
-import { FC, useCallback, useEffect } from 'react'
+import { FC, useCallback, useEffect, useState } from 'react'
 import { loadingStatus } from './style.css'
 import { AsteroidCard } from '@entity/asteroid'
 import { useInfiniteQuery } from '@tanstack/react-query'
@@ -11,6 +11,7 @@ import { $cart, addToCart } from '@entity/cart'
 import { AddToCartButton } from '@feature/add-to-cart'
 import { TitledList } from '@ui/titled-list'
 import { useRouter } from 'next/navigation'
+import { TextSwitch } from '@ui/text-switch'
 
 function useAsteroids() {
 	const { ref, inView } = useInView()
@@ -43,10 +44,24 @@ function useGetAlreadyInCart() {
 export const Asteroids: FC = () => {
 	const { ref, data, status, isFetchingNextPage } = useAsteroids()
 	const getAlreadyInCart = useGetAlreadyInCart()
+	const [units, setUnits] = useState<'kilometers' | 'lunar'>('kilometers')
 	const { push } = useRouter()
 
 	return (
-		<TitledList title='Ближайшие подлёты астероидов'>
+		<TitledList
+			title='Ближайшие подлёты астероидов'
+			features={[
+				<TextSwitch
+					key='units-switch'
+					value={units}
+					options={[
+						{ id: 'kilometers', label: 'Километры' },
+						{ id: 'lunar', label: 'Лунные орбиты' },
+					]}
+					onChange={setUnits}
+				/>,
+			]}
+		>
 			{status === 'pending' ? (
 				<div className={loadingStatus}>Загрузка</div>
 			) : status === 'error' ? (
@@ -59,7 +74,7 @@ export const Asteroids: FC = () => {
 								<AsteroidCard
 									key={asteroid.id}
 									asteroid={asteroid}
-									units='lunar'
+									units={units}
 									onClick={() => push(`asteroid/${asteroid.id}`)}
 									features={[
 										<AddToCartButton

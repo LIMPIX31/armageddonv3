@@ -92,6 +92,9 @@
       "@ui/button": [
         "shared/ui/button"
       ],
+      "@ui/text-switch": [
+        "shared/ui/text-switch"
+      ],
       "@ui/titled-list": [
         "shared/ui/titled-list"
       ],

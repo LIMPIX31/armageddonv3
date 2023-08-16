@@ -4,6 +4,7 @@
 	"dependencies": {
 		"@entity/asteroid": "workspace:^",
 		"@entity/cart": "workspace:^",
+		"@ui/text-switch": "workspace:^",
 		"@ui/titled-list": "workspace:^",
 		"effector": "^22.8.6",
 		"effector-react": "^22.5.3"
