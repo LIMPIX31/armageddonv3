@@ -37,7 +37,8 @@ export interface EarthObject {
 	name_limited: string
 	designation: string
 	estimated_diameter: DiameterOptions
-	close_approach_data: MissDistance
+	close_approach_data: CloseApproachData[]
+	is_potentially_hazardous_asteroid: boolean
 }
 
 export interface BrowseResponse {

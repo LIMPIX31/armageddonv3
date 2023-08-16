@@ -18,3 +18,8 @@ export const list = style({
 	flexDirection: 'column',
 	gap: 12,
 })
+
+export const loadingStatus = style({
+	color: vars.color.foreground,
+	fontWeight: '900',
+})

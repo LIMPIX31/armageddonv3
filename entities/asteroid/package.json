@@ -2,6 +2,7 @@
 	"name": "@entity/asteroid",
 	"main": "src/index.ts",
 	"dependencies": {
+		"@lib/declensions": "workspace:^",
 		"@theme/css": "workspace:^",
 		"@vanilla-extract/css": "^1.12.0"
 	},

@@ -23,6 +23,7 @@ export const stats = style({
 export const arrow = style({
 	height: 2,
 	margin: '10px 0',
+	marginLeft: 4,
 	backgroundColor: vars.color.grayDisabled,
 	rotate: '0deg',
 	translate: '0 7px',
