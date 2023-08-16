@@ -8,6 +8,11 @@ export const root = style({
 	backgroundColor: vars.color.semigrayDisabled,
 	padding: 16,
 	borderRadius: vars.radius.md,
+	'@media': {
+		'(width < 1000px)': {
+			width: '100vw',
+		},
+	},
 })
 
 export const info = style({

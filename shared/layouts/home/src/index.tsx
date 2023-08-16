@@ -1,5 +1,5 @@
 import { FC, ReactNode } from 'react'
-import { content, earthDesktop, rootDesktop, row, side } from './style.css'
+import * as s from './style.css'
 
 export interface HomeLayoutProps {
 	header: ReactNode
@@ -9,17 +9,15 @@ export interface HomeLayoutProps {
 }
 
 export const HomeLayout: FC<HomeLayoutProps> = ({ header, container, cart, earth }) => (
-	<div className={rootDesktop}>
+	<div className={s.root}>
 		<div />
-		<div className={row}>
+		<div className={s.row}>
 			<div>
 				{header}
-				<div className={earthDesktop}>
-					{earth}
-				</div>
+				<div className={s.earth}>{earth}</div>
 			</div>
-			<div className={content}>{container}</div>
-			<div className={side}>{cart}</div>
+			<div className={s.content}>{container}</div>
+			<div className={s.side}>{cart}</div>
 		</div>
 	</div>
 )

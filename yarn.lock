@@ -940,6 +940,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@layout/home@workspace:shared/layouts/home"
   dependencies:
+    "@theme/css": "workspace:^"
     "@types/react": "npm:^18.2.20"
     "@vanilla-extract/css": "npm:^1.12.0"
   peerDependencies:
